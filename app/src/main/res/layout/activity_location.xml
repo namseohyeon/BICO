@@ -7,14 +7,19 @@
     android:orientation="vertical"
     android:background="#ACDCC8"
     tools:context=".LocationActivity">
-
-    <fragment
-        android:id="@+id/map_fragment"
-        android:name="com.naver.maps.map.MapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+    <com.naver.maps.map.MapView
+        android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
         />
+<!--    <fragment-->
+<!--        android:id="@+id/map_fragment"-->
+<!--        android:name="com.naver.maps.map.MapFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        />-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavi"

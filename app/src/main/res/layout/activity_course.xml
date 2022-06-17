@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#ACDCC8"
     tools:context=".CourseActivity">
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/plz"-->
+<!--        ></Button>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/activity_content" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavi"
@@ -15,4 +28,5 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         app:menu="@menu/bottombar"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
 </LinearLayout>
