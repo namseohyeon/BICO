@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#ACDCC8"
-    tools:context=".MainActivity">
+    tools:context=".StartActivity">
 
     <LinearLayout
         android:layout_marginTop="50dp"

@@ -12,9 +12,9 @@
         <activity
             android:name=".LocationActivity"
             android:exported="false" />
-        <!-- <meta-data -->
-        <!-- android:name="com.naver.maps.map.CLIENT_ID" -->
-        <!-- android:value="ailn4ht27v" /> -->
+         <meta-data
+         android:name="com.naver.maps.map.CLIENT_ID"
+         android:value="ailn4ht27v" />
         <activity
             android:name=".DiaryActivity"
             android:exported="false" />

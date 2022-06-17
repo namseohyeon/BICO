@@ -17,7 +17,10 @@ class StartActivity : AppCompatActivity() {
             var intent = Intent(this, CourseActivity::class.java)
             startActivity(intent)
         }
-
+        binding.location.setOnClickListener{
+            var intent = Intent(this, LocationActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.MyBico.setOnClickListener{
             var intent = Intent(this, MyBicoActivity::class.java)
