@@ -7,6 +7,24 @@
     android:orientation="vertical"
     android:background="#ACDCC8"
     tools:context=".LocationActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BICO"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/leaf" />
+    </androidx.appcompat.widget.Toolbar>
     <com.naver.maps.map.MapView
         android:id="@+id/map_view"
             android:layout_width="match_parent"

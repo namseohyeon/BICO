@@ -13,12 +13,13 @@ class CourseActivity : AppCompatActivity() {
         var binding = ActivityCourseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val Realfragment = realFragment()
         val bundle = Bundle()
-            bundle.putString("returnType", "json")
-            Realfragment.arguments = bundle
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.activity_content, Realfragment)
-                .commit()
+        bundle.putString("returnType", "json")
+        Realfragment.arguments = bundle
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.activity_content, Realfragment)
+            .commit()
     }
 }
