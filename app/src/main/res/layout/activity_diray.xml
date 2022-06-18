@@ -24,7 +24,6 @@
             android:layout_height="30dp"
             android:src="@drawable/leaf" />
     </androidx.appcompat.widget.Toolbar>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavi"
         app:labelVisibilityMode="labeled"
@@ -33,4 +32,6 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         app:menu="@menu/bottombar"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
 </LinearLayout>
