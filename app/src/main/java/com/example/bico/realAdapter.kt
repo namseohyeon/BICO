@@ -20,8 +20,8 @@ class realAdapter(val context: Context, val datas:MutableList<Row>?):
         val model = datas!![position]
         binding.rackTotCnt.text = " 거치대 수: "+model.rackTotCnt.toString()
         binding.stationName.text = " 위치: "+model.stationName
-        binding.parkingBikeTotCnt.text = " 자전거 주차 건수:"+model.parkingBikeTotCnt.toString()
-        binding.shared.text = " 거치율"+model.shared.toString()
+        binding.parkingBikeTotCnt.text = " 자전거 주차 건수: "+model.parkingBikeTotCnt.toString()
+        binding.shared.text = " 거치율: "+model.shared.toString()
 
         //val rackTotCnt: Int, val stationName:String, val parkingBikeTotCnt:Int, val shared:Int, val stationLatitude:Float, val stationLongitude:Float
 

@@ -5,6 +5,8 @@
     android:layout_height="wrap_content">
     <TextView
         android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="이름 "
@@ -19,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="거치대 수  "
-            android:textColor="#ffeead"
+            android:textColor="#742906"
             android:textSize="20dp"
             android:id="@+id/rackTotCnt" />
         <TextView
@@ -27,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="주차총건수  "
-            android:textColor="#f4f0e6"
+            android:textColor="#742906"
             android:textSize="20dp"
             android:id="@+id/parkingBikeTotCnt" />
         <TextView
@@ -41,10 +43,10 @@
 
     </LinearLayout>
     <View
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#f4f0e6" />
+        android:background="#742906" />
 
 
 </LinearLayout>
