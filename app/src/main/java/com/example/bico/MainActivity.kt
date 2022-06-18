@@ -16,6 +16,7 @@ import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
+import com.kakao.sdk.user.model.User
 
 //import net.daum.mf.map.api.MapView
 
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AuthActivity::class.java)
             intent.putExtra("data","login")
             startActivity(intent)
+            finish()
         }
 
         binding.signup.setOnClickListener{
@@ -65,6 +67,48 @@ class MainActivity : AppCompatActivity() {
                     Log.e("mobileApp", "카카오계정으로 로그인 실패", error)
                 } else if (token != null) {
                     Log.i("mobileApp", "카카오계정으로 로그인 성공 ${token.accessToken}")
+                    // 사용자 정보 요청 (기본)
+                    UserApiClient.instance.me { user, error ->
+                        if (error != null) {
+                            Log.e("mobileApp", "사용자 정보 요청 실패", error)
+                        }
+                        else if (user != null) {
+                            Log.i("mobileApp", "사용자 정보 요청 성공 ${user.kakaoAccount?.email}")
+                            var scopes = mutableListOf<String>()
+                            if(user.kakaoAccount?.email != null){
+                                loginApplication.email = user.kakaoAccount?.email.toString()
+                                val intent = Intent(this, StartActivity::class.java)
+                                startActivity(intent)
+                                finish()
+                            }
+                            else if(user.kakaoAccount?.emailNeedsAgreement == true){
+                                Log.i("mobileApp", "사용자에게 추가 동의 필요")
+                                scopes.add("account_email")
+                                UserApiClient.instance.loginWithNewScopes(this,scopes){token, error->
+                                    if(error != null){
+                                        Log.e("mobileApp","추가동의 실패",error)
+                                    }
+                                    else{
+                                       //사용자 정보 재요청
+                                        UserApiClient.instance.me{user,error ->
+                                            if(error!=null){
+                                                Log.e("mobileApp","사용자 정보 요청 실패",error)
+                                            }else if(user != null){
+                                                loginApplication.email = user.kakaoAccount?.email.toString()
+                                                val intent = Intent(this, StartActivity::class.java)
+                                                startActivity(intent)
+                                                finish()
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                            else{
+                                Log.e("mobileApp","이메일 획득 불가", error)
+                            }
+                        }
+                    }
                 }
             }
             if(UserApiClient.instance.isKakaoTalkLoginAvailable(this)){

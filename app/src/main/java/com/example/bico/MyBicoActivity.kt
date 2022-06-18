@@ -17,8 +17,12 @@ class MyBicoActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        if(loginApplication.checkAuth()){
-            binding.name.text = "${loginApplication.email}"
+        if(loginApplication.email != null){
+            binding.name.text = "${loginApplication.email} 님 안녕하세요"
+            binding.name.textSize = 24F
+
+        }else if(loginApplication.checkAuth()){
+            binding.name.text = "${loginApplication.email} 님 안녕하세요"
             binding.name.textSize = 24F
         }
     }
