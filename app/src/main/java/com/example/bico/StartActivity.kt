@@ -16,6 +16,7 @@ class StartActivity : AppCompatActivity() {
         var binding = ActivityStartBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
 
         binding.course.setOnClickListener{
             var intent = Intent(this, CourseActivity::class.java)
@@ -33,9 +34,6 @@ class StartActivity : AppCompatActivity() {
         binding.diary.setOnClickListener{
             var intent = Intent(this, DiaryActivity::class.java)
             startActivity(intent)
-        }
-        binding.real.setOnClickListener{
-
         }
     }
 }

@@ -84,15 +84,5 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="My Bico"/>
-
-        <Button
-            android:layout_marginLeft="15dp"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:backgroundTint="#439C7C"
-            android:id="@+id/real"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:text="대여소 정보"/>
     </GridLayout>
 </LinearLayout>

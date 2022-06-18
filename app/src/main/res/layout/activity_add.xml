@@ -4,15 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ACDCC8"
     android:orientation="vertical"
-    android:background="#EEECE7"
-    tools:context=".CourseActivity">
-
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/plz"-->
-<!--        ></Button>-->
+    tools:context=".AddActivity">
 <!--    <androidx.appcompat.widget.Toolbar-->
 <!--        android:id="@+id/toolbar"-->
 <!--        android:layout_width="match_parent"-->
@@ -30,13 +24,43 @@
 <!--            android:layout_width="30dp"-->
 <!--            android:layout_height="30dp"-->
 <!--            android:src="@drawable/leaf" />-->
+<!--        <ImageView-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:id="@+id/save"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/mark" />-->
+<!--        <ImageView-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:id="@+id/gallery"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/picture" />-->
+<!--        <ImageView-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:id="@+id/camera"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/camera" />-->
+
+
 <!--    </androidx.appcompat.widget.Toolbar>-->
 
-    <FrameLayout
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/addImgView"
+        android:scaleType="fitXY" />
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/activity_content" />
+        android:id="@+id/addEditView"
+        android:hint="내용을 입력해주세요"
+        android:gravity="left|top"></EditText>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         app:itemTextColor="@color/black"
@@ -48,5 +72,6 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         app:menu="@menu/bottombar"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </LinearLayout>

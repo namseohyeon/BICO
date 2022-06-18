@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         var binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
 //        val keyHash = Utility.getKeyHash(this)
 //        Log.d("mobileApp", keyHash)
 
