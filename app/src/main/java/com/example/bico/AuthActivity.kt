@@ -64,7 +64,6 @@ class AuthActivity : AppCompatActivity() {
 
         }
 
-
     }
     fun changeVisivility(mode:String){
         if(mode.equals("login")){

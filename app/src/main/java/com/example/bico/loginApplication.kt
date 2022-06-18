@@ -4,6 +4,7 @@ import androidx.multidex.MultiDexApplication
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.auth.ktx.auth
+import com.kakao.sdk.common.KakaoSdk
 
 class loginApplication: MultiDexApplication() {
     companion object{
@@ -24,6 +25,7 @@ class loginApplication: MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         auth = Firebase.auth
+        KakaoSdk.init(this,"2709911578d436c70e3c1e5a74653dfc")
     }
     }
 
