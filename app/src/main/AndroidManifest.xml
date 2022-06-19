@@ -17,6 +17,15 @@
         android:theme="@style/Theme.Bico"
         android:usesCleartextTraffic="true">
         <activity
+            android:exported="true"
+            android:name=".TitleActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".AddActivity"
             android:exported="false" />
         <activity
@@ -65,17 +74,16 @@
                     android:scheme="kakao2709911578d436c70e3c1e5a74653dfc" />
             </intent-filter>
         </activity>
+
         <provider
-            android:authorities="com.example.bico"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.bico"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths">
-            </meta-data>
+                android:resource="@xml/file_paths"></meta-data>
         </provider>
-
     </application>
 
 </manifest>

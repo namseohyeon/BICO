@@ -1,10 +1,13 @@
 package com.example.bico
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bico.databinding.ItemMainBinding
+import com.naver.maps.geometry.LatLng
+import java.util.*
 
 class realViewHolder(val binding: ItemMainBinding): RecyclerView.ViewHolder(binding.root)
 class realAdapter(val context: Context, val datas:MutableList<Row>?):
@@ -31,4 +34,17 @@ class realAdapter(val context: Context, val datas:MutableList<Row>?):
         //TODO("Not yet implemented")
         return realViewHolder(ItemMainBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
+
+    fun sum(datas:MutableList<Row>, position: Int):Vector<LatLng>{
+        val model = datas!![position]
+        var markersPosition = Vector<LatLng>()
+        var Latitude = model.stationLatitude
+        var Longitude = model.stationLongitude
+        for (i in 0 until 1000) {
+            markersPosition.add(LatLng(Latitude.toDouble(), Longitude.toDouble()))
+        }
+        return markersPosition;
+    }
+
 }
+
